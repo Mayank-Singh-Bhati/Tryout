@@ -21,6 +21,10 @@ body {
   color: #793EEC;
 }
 
+.text-white {
+  color: #FFFFFF;
+}
+
 /* Navbar - Styling */
 #one-head {
   width: 100%;
@@ -229,6 +233,44 @@ body {
 #docs {
   height: 400px;
 }
+
+
+/* Section Promo - Styling */
+#promo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #793EEC;
+}
+
+#promo h1 {
+  font-size: 40px;
+}
+
+/* Tablet and Mobile mode (Promo) */
+@media screen and (max-width: 768px){
+  #promo {
+    height: 120px;
+  }
+  #promo h1 {
+    font-size: 28px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Tablet mode - Styling (Hero) */
