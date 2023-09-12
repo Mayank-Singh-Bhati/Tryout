@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examr | Homepage</title>
     <link rel="shortcut icon" href="img/Logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="one-head">
@@ -21,6 +21,7 @@
                 <li class="nav-link-item"><a class="nav-link" href="#">FAQ</a></li>
             </ul>
             <div class="nav-btns nav-item mb-btns-close">
+                <img src="img/maa-saraswati.png" alt="Maa Saraswati" class="btn-img hide">
                 <button id="web-btn">Web Version</button>
                 <button id="app-btn">Download App</button>
             </div>
@@ -37,6 +38,7 @@
             document.querySelector('.menu-wrap').classList.toggle('open');
             document.querySelector('.nav-btns').classList.toggle('mb-btns-open');
             document.querySelector('.nav-btns').classList.toggle('mb-btns-close');
+            document.querySelector('.btn-img').classList.toggle('hide');
         }
     </script>
 </body>
