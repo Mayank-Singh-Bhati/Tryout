@@ -35,6 +35,10 @@ body {
 }
 
 /* Logo - Styling */
+.logo-box {
+  z-index: 20;
+}
+
 .logo-head {
   font-size: 24px;
   font-weight: 600;
@@ -124,6 +128,7 @@ body {
   margin-right: 30px;
   box-sizing: border-box;
   display: none;
+  z-index: 20;
 }
 
 .menu,
@@ -183,9 +188,9 @@ body {
     padding: 40px;
     gap: 20px;
     width: 100vw;
-    height: 93vh;
-    top: 70px;
-    left: 0px;
+    height: 100vh;
+    top: 0;
+    left: 0;
     background-color: #FFFFFF;
     /* border-radius: 0px 0px 10px 10px; */
     
