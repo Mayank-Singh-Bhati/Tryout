@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examr | Homepage</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="color.css" />
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .faq.active .answer {
+        max-height:fit-content;
+      }
+      .faq.active .bi {
+        display:none;
+      }
+    </style>
+  </head>
+  <body
+    class="antialiased examr-background"
+    style="font-family: 'sora', sans-serif"
+  >
+    <!-- Navbar -->
+    <header
+      class="shadow-md shadow-[#e6e6e6] bg-white md:shadow-none md:bg-[#F7F6F8]"
+    >
+      <!--  -->
+      <nav
+        class="flex flex-wrap items-center justify-between w-full py-2 px-4 md:py-0"
+      >
+        <div>
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center justify-start">
+            <img src="../img/logo.png" alt="logo" class="h-14" />
+            <h1 class="text-2xl font-bold">Examr</h1>
+          </a>
+        </div>
+        <img
+          id="menu"
+          src="../img/menu.svg"
+          alt="logo"
+          class="h-9 md:hidden"
+          onclick="menuChange(), menuToggle()"
+        />
+        <div
+          id="navitem"
+          class="hidden flex-col w-[100vw] px-8 py-5 gap-5 md:flex md:text-sm md:justify-between md:items-center md:px-3 md:flex-row md:w-fit md:gap-0"
+        >
+          <!-- Navlinks -->
+          <ul
+            id="navlinks"
+            class="flex flex-col lg:gap-8 lg:text-lg md:gap-x-0.5 md:justify-between md:items-center md:flex-row md:text-sm"
+          >
+            <li
+              class="home  px-2 py-2 md:hover:bg-[rgba(121,62,229,0.8)] md:hover:rounded-[5px] md:hover:text-white cursor-pointer"
+            >
+              <a href="#">Home</a>
+            </li>
+            <li
+              class="about-us-link px-2 py-2 md:hover:bg-[rgba(121,62,229,0.8)] md:hover:rounded-[5px] md:hover:text-white cursor-pointer"
+            >
+              <a href="#">About Us</a>
+            </li>
+            <li
+              class="contact-us-link px-2 py-2 md:hover:bg-[rgba(121,62,229,0.8)] md:hover:rounded-[5px] md:hover:text-white cursor-pointer"
+            >
+              <a href="#">Contact Us</a>
+            </li>
+            <li
+              class="faq-link px-2 py-2 md:hover:bg-[rgba(121,62,229,0.8)] md:hover:rounded-[5px] md:hover:text-white cursor-pointer"
+            >
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+          <!-- Divider " | " -->
+          <span
+            id="divider"
+            class="font-thin text-4xl mx-2 hidden md:block lg:mx-[40px]"
+            >|</span
+          >
+          <!-- Buttons -->
+          <button
+            id="web-btn"
+            class="px-5 py-2  font-medium rounded-md w-48 md:pr-5 text-[#793EE5] md:w-fit md:px-0 bg-transparent lg:text-base"
+          >
+            Web Version
+          </button>
+          <button
+            id="app-btn"
+            class="w-48 px-5 py-2 examr-purple-bg text-white font-semibold rounded-md md:w-fit lg:text-base"
+          >
+            Download App
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div
+      class="px-5 py-5 flex flex-col items-center gap-1 sm:flex sm:flex-row sm:justify-evenly sm:py-14 sm:px-14 sm:gap-5 lg:justify-evenly"
+    >
+      <div
+        class="w-full flex flex-col items-center gap-5 py-5 sm:w-fit sm:justify-between sm:items-start"
+      >
+        <h1 class="text-4xl font-bold sm:text-4xl lg:text-6xl">
+          Study <span class="text-[#793EE5]">Smarter,</span><br />Not
+          <span class="text-[#793EE5]">Harder</span>
+        </h1>
+        <p
+          class="text-base text-[#444444] text-justify max-w-[400px] sm:w-11/12 sm:max-w-[450px] sm:text-lg md:font-semibold md:text-lg lg:text-2xl lg:max-w-[700px]"
+        >
+          Examr helps students learn more efficiently and effectively with its
+          comprehensive study materials and previous year papers.
+        </p>
+        <div class="flex flex-col md:flex-row-reverse">
+          <button
+          class="px-5 py-3 text-[#793EE5] text-base rounded-md md:text-lg outline-none"
+        >
+          Use Web Version
+        </button>
+        <button
+          class="flex py-3 px-5 gap-x-4 bg-[#793EE5] items-center text-white text-base rounded-md md:text-lg"
+        >
+        <img src="../img/android.svg" class="h-7 mx-4" alt="download" />
+          Download App
+        </button>
+        </div>
+      </div>
+      <img
+        class="h-60 w-fit hidden sm:block lg:h-96"
+        src="../img/docs.png"
+        alt="docs"
+      />
+    </div>
+
+    <!-- Promotion -->
+    <div class="w-full py-5 my-4 bg-[#793EE5] sm:py-8">
+      <h1 class="font-bold text-xl text-center sm:text-3xl md:text-5xl">
+        <span class="text-white">"</span>Ace Your
+        <span class="text-white">Exams</span> With Examr<span class="text-white"
+          >"</span
+        >
+      </h1>
+    </div>
+
+    <!-- About Us -->
+    <div class="about-us flex flex-col items-center text-center mt-6 lg:mt-10">
+      <h4 class="text-[#793EE5] text-xs md:text-base">About Us</h4>
+      <h1 class="text-base font-bold sm:text-lg md:text-2xl lg:text-3xl">
+        Who We Are
+      </h1>
+    </div>
+    <div
+      class="flex flex-col px-4 items-center md:flex-row md:justify-evenly md:gap-5 md:px-6 lg:justify-evenly lg:gap-5 xl:gap-0"
+    >
+      <img
+        class="w-6/12 min-w-[240px] my-5 sm:w-72 md:w-80 lg:w-96 xl:w-4/12"
+        src="../img/Portfolio.png"
+        alt=""
+      />
+      <div
+        class="md:flex md:flex-col md:items-start md:max-w-[550px] md:py-4 lg:max-w-[800px] gap-4"
+      >
+        <h1
+          class="text-base font-bold text-center sm:text-xl md:text-left md:text-2xl lg:text-3xl xl:text-4xl"
+        >
+          Shaping a New Era of Sharing
+          <span class="text-[#793EE5]">Papers</span> With
+          <span class="text-[#793EE5]">Exam</span>'s Help
+        </h1>
+        <p
+          class="hidden md:block md:text-justify md:text-lg md:font-semibold md:text-[#444444] lg:text-xl"
+        >
+          Examr is an invaluable educational platform, offering students a
+          diverse range of comprehensive study materials covering crucial exam
+          topics. These resources not only provide essential knowledge but also
+          cultivate vital skills for academic success
+        </p>
+      </div>
+    </div>
+    <!-- Features -->
+    <div class="features flex flex-col items-center text-center mt-10">
+      <h4 class="text-[#793EE5] text-xs md:text-base">Features</h4>
+      <h1 class="text-base font-bold sm:text-lg md:text-2xl lg:text-3xl">
+        Why We
+      </h1>
+    </div>
+    <div
+      class="flex w-full gap-10 md:gap-20 flex-wrap justify-evenly px-4 md:px-6 my-4 md:my-10"
+    >
+      <!-- Notifications -->
+      <div
+        id="notification"
+        class="w-[300px] border border-transparent relative"
+      >
+        <img
+          src="../img/notification.svg"
+          alt="notification"
+          class="p-2.5 bg-[#F8C5A9] rounded-lg absolute top-0 left-0"
+        />
+        <img
+          src="../img/one.png"
+          alt=""
+          class="h-[100px] md:h-[115px] absolute top-0 right-0"
+        />
+        <h1 class="mt-[75px] text-xl md:text-3xl font-semibold">
+          Get <span class="text-[#793EE5]">Notified</span>
+        </h1>
+        <p
+          class="w-full mt-[5px] text-justify text-xs md:text-base font-medium text-[#444444]"
+        >
+          Examr's "Get Notified" feature enables students to effortlessly stay
+          updated with instant notifications for document changes and news,
+          streamlining their exam preparation.
+        </p>
+      </div>
+      <!-- UI -->
+      <div id="ui" class="w-[300px] border border-transparent relative">
+        <img
+          src="../img/ui8.svg"
+          alt="notification"
+          class="p-2.5 bg-[#DEA9F8] rounded-lg absolute top-0 left-0"
+        />
+        <img
+          src="../img/two.png"
+          alt=""
+          class="h-[100px] md:h-[115px] absolute top-0 right-0"
+        />
+        <h1 class="mt-[75px] text-xl md:text-3xl font-semibold">
+          Clean <span class="text-[#793EE5]">UI</span>
+        </h1>
+        <p
+          class="w-full mt-[5px] text-justify text-xs md:text-base font-medium text-[#444444]"
+        >
+          Examr's clean UI prioritizes user-friendly navigation, ensuring
+          students can access stydy materials seamlessly for optimal exam
+          preparation.
+        </p>
+      </div>
+      <!-- Central Hub -->
+      <div id="hub" class="w-[300px] border border-transparent relative">
+        <img
+          src="../img/hub.svg"
+          alt="notification"
+          class="p-2.5 bg-[#A9F8B1] rounded-lg absolute top-0 left-0"
+        />
+        <img
+          src="../img/three.png"
+          alt=""
+          class="h-[100px] md:h-[115px] absolute top-0 right-0"
+        />
+        <h1 class="mt-[75px] text-xl md:text-3xl font-semibold">
+          Central <span class="text-[#793EE5]">Hub</span>
+        </h1>
+        <p
+          class="w-full mt-[5px] text-justify text-xs md:text-base font-medium text-[#444444]"
+        >
+          Students can access a diverse array of study materials, ranging from
+          comprehensive notes to interactive multimedia resources, all organized
+          intuitively by subject and topic
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="contact-us lg:mt-[250px] xl:mt-[275px]">
+      <!-- Main Container -->
+      <div
+        class="relative lg:h-[500px] w-full bg-[#793EE5] lg:bg-none flex flex-col items-center lg:flex-row lg:justify-center sm:p-6 lg:gap-14"
+      >
+        <div class="hidden xl:block absolute top-0 left-0 w-44">
+          <img src="../img/Box 1.svg" alt="" />
+        </div>
+        <div class="hidden xl:block absolute bottom-0 left-0 w-48">
+          <img src="../img/Box 2.svg" alt="" />
+        </div>
+        <h1
+          class="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold my-4"
+        >
+          Join Us in This Exciting <span class="text-black">Journey</span
+          ><br />to Ace your Exams
+        </h1>
+
+        <!-- Contact Us Wrapper -->
+        <div
+          class="flex flex-col items-start w-full sm:max-w-[500px] bg-[#EEEEEA] p-4 sm:px-6 sm:rounded-md lg:-translate-y-28"
+        >
+          <h1 class="my-4 font-bold text-2xl">Contact Us</h1>
+          <form action="#" class="space-y-6 flex flex-col w-full items-center">
+            <div class="input-field flex flex-col space-y-2 w-full">
+              <label for="user-name">Name</label>
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="bg-transparent w-full px-2 py-1 outline-none border-b-2 border-[#444444] text-base text-[#444444] font-medium"
+                required
+              />
+            </div>
+            <div class="input-field flex flex-col space-y-2 w-full">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                placeholder="abc@xyz.com"
+                class="bg-transparent w-full px-2 py-1 outline-none border-b-2 border-[#444444] text-base text-[#444444] font-medium"
+                required
+              />
+            </div>
+            <div class="input-field flex flex-col space-y-2 w-full">
+              <label for="feedback">Message</label>
+              <textarea
+                name="feedback"
+                class="p-2 outline-none text-base text-[#444444] font-medium md:resize-none min-h-[40px]"
+                cols="30"
+                rows="10"
+                placeholder="Type your message here"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              class="py-3 rounded-md bg-[#793EE5] text-white font-medium text-base w-full"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ (Frequently Asked Questions) -->
+    <div class="faq-section main-conatiner my-10 relative">
+      <img src="../img/vector.png" alt="" class="hidden absolute top-0 left-10 xl:block h-24">
+      <img src="../img/vector 1.png" alt="" class="hidden absolute bottom-0 right-20 xl:block h-24">
+      <div class="flex flex-col items-center mb-4 space-y-2">
+        <h1 class="text-3xl font-bold">FAQ</h1>
+        <h4 class="text-center text-[#666666] font-light text-base">
+          Answering Some Frequently Asked Questions
+        </h4>
+      </div>
+      <!-- Q1 -->
+      <div class="faq mt-5 border-b-2 border-black cursor-pointer w-11/12 mx-auto max-w-[900px]">
+        <div class="question flex justify-between items-center">
+          <h3 class="font-semibold text-base sm:text-lg">What is Examr?</h3>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle m-2"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+        </div>
+        <div class="answer max-h-0 overflow-hidden transition-all duration-700 ease-in-out">
+          <p class="text-justify px-2 py-4">
+            Examr is an innovative online platform designed to provide students
+            with comprehensive study materials, practice tests, progress tracking,
+            and timely notifications, all aimed at enhancing their exam
+            preparation experience.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Q2 -->
+      <div class="faq mt-5 border-b-2 border-black cursor-pointer w-11/12 mx-auto max-w-[900px]">
+        <div class="question flex justify-between items-center">
+          <h3 class="font-semibold text-base sm:text-lg">Is Examr Safe?</h3>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle m-2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+        </div>
+        <div class="answer max-h-0 overflow-hidden">
+          <p class="text-justify px-2 py-4">
+            Yes, Examr is safe and secure. All the resources provided are genuine and trusted by the admin. User's privacy and safety has been Examr's primary concern.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Q3 -->
+      <div class="faq mt-5 border-b-2 border-black cursor-pointer w-11/12 mx-auto max-w-[900px]">
+        <div class="question flex justify-between items-center">
+          <h3 class="font-semibold text-base sm:text-lg">Is Examr free?</h3>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle m-2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+        </div>
+        <div class="answer max-h-0 overflow-hidden">
+          <p class="text-justify px-2 py-4">
+            Examr is Free.<br>Access the best notes and previous year papers gathered from trustworthy sources.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Q4 -->
+      <div class="faq mt-5 border-b-2 border-black cursor-pointer w-11/12 mx-auto max-w-[900px]">
+        <div class="question flex justify-between items-center">
+          <h3 class="font-semibold text-base sm:text-lg">Who upload the notes on Examr?</h3>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle m-2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+        </div>
+        <div class="answer max-h-0 overflow-hidden">
+          <p class="text-justify px-2 py-4">
+            The admin and moderators are given the privilege to share the notes and the papers.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Q5 -->
+      <div class="faq mt-5 border-b-2 border-black cursor-pointer w-11/12 mx-auto max-w-[900px]">
+        <div class="question flex justify-between items-center">
+          <h3 class="font-semibold text-base sm:text-lg">Can I become the moderators?</h3>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle m-2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+        </div>
+        <div class="answer max-h-0 overflow-hidden">
+          <p class="text-justify px-2 py-4">
+            <a href="#" class="font-medium text-[#793EE5]">Contact</a> the Examr admin to become the moderators.<br>Note: Moderators can be removed if found spaming, misleading and been inactive for a long period of time.
+          </p>
+        </div>
+      </div>
+      <div class="h-36 hidden xl:block"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#050517] py-5 px-4 text-white lg:pt-10">
+      <!-- footer top -->
+      <div class="flex flex-wrap gap-10 w-full sm:justify-around">
+        <!-- One -->
+      <div class="flex flex-col gap-5 max-w-[300px]">
+        <div class="flex items-center gap-1">
+          <img src="../img/logo.png" alt="logo" class="h-10">
+          <h1 class="font-bold text-lg lg:text-xl">Examr</h1>
+        </div>
+        <p class="text-white text-xs lg:text-base">Your All-in-One solution for Accessing Study Materials, timely Notifications, Ensuring Exam Excellence.</p>
+        <div class="social-media-icons flex gap-10">
+          <a href="https://www.instagram.com/bmayanksingh/"><img src="../img/instagram.svg" alt="instagram" class="h-7"></a>
+          <a href="#"><img src="../img/android.svg" alt="android" class="h-7"></a>
+          <a href="#"><img src="../img/github.svg" alt="github" class="h-7"></a>
+        </div>
+      </div>
+
+      <!-- Two -->
+      <div class="flex flex-col gap-2">
+        <h4 class="text-lg lg:text-xl">Company</h4>
+        <div class="flex flex-row gap-4 flex-wrap text-xs sm:flex-col sm:text-base">
+          <a href="#">About Us</a>
+          <a href="#">Features</a>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+
+      <!-- Three -->
+      <div class="flex flex-col gap-2">
+        <h4 class="text-lg lg:text-xl">Product</h4>
+        <div class="flex flex-row gap-4 flex-wrap text-xs sm:flex-col sm:text-base">
+          <a href="#">Examr Android App</a>
+          <a href="#">Examr IOS App</a>
+        </div>
+      </div>
+
+      <!-- Four -->
+      <div class="flex flex-col gap-2 max-w-[350px]">
+        <h4 class="text-lg lg:text-xl">Join Our Newsletter</h4>
+        <form action="#" class="flex">
+          <input type="text" placeholder="Email Address" class="px-2 py-3 rounded-l-sm text-sm text-black lg:text-base" required>
+          <input type="submit" value="Subscribe" class="bg-[#793EE5] px-4 py-3 rounded-r-sm text-xs lg:text-base"/>
+        </form>
+        <p class="text-xs text-[#9c9c9c] lg:text-base">We will Send You Updates Monthly, Promo & New Features</p>
+      </div>
+      </div>
+      <!-- footer middle -->
+      <div class="flex flex-wrap gap-x-10 gap-y-4 items-center my-10 w-full justify-center">
+        <a href="#">Post Policy</a>
+        <a href="#">News Policy</a>
+        <a href="#">Terms and Conditions</a>
+      </div>
+      <!-- footer bottom -->
+      <p class="text-xs sm:text-sm text-[#9c9c9c] w-full text-center">2023 © Examr All Rights Reserved</p>
+    </footer>
+    <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+        class="hidden fixed z-90 bottom-2 right-2 md:bottom-2 md:right-2 border-0 w-6 h-6 md:w-10 md:h-10 rounded-full drop-shadow-md bg-[#793EE5] text-white text-base md:text-3xl font-bold">&uarr;</button>
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+  </body>
+</html>
