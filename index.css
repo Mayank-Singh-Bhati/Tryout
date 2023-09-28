@@ -64,6 +64,14 @@ body {
   /* 2 */
 }
 
+/* Show and Hide faq answer */
+.faq.active .answer {
+        max-height:fit-content;
+      }
+      .faq.active .bi {
+        display:none;
+      }
+
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -980,11 +988,11 @@ video {
 }
 
 .bg-\[\#\] {
-  background-color: #;
+  background-color: #793ee5;
 }
 
 .bg-\[\#793EE\] {
-  background-color: #793EE;
+  background-color: #793EE5;
 }
 
 .p-2 {
