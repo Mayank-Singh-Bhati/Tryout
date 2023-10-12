@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderProduction</title>
+    <link rel="stylesheet" href="underProduction.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="#" class="logoMain"><img src="logo.png" alt="logo"><h1>Examr</h1></a>
+        <button type="button" onclick="previous()"><span>←</span> <span class="back">GoBack</span></button>
+    </div>
+    <div id="container">
+        <img src="docs.png" alt="docs">
+        <h2>We're</h2>
+        <h1>UNDER DEVELOPMENT</h1>
+    </div>
+    <!-- JavaScript -->
+    <script>
+        const previous = () => {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
